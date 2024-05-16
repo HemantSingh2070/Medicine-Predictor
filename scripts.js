@@ -1,10 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import {GoogleGenerativeAI_API_KEY} from "./assets/api";
 let age = document.getElementById("age");
 let day = document.getElementById("day");
 let symptom = document.getElementById("symptom");
 let submit = document.getElementById("submit");
 let output = document.getElementById("generatedText");
-const API_KEY = "AIzaSyAGArg8y-tifLLaB3W3EQ5uVRJdzPOtXUA"; 
+const API_KEY = GoogleGenerativeAI_API_KEY; 
 const genAI = new GoogleGenerativeAI(API_KEY);
 document.getElementById("reset").addEventListener('click',()=>{
     window.location.reload();
