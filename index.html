@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/—Pngtree—herb medicine logo vector_9043824.png">
+    <title>Medicine Predictor</title>
+</head>
+<body>
+    <h1>Medicine Predictor</h1>
+    <div id="container">
+        <div class="header">
+            <div id="input">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="symptom">Symptoms </label>
+                        </td>
+                        <td>
+               <textarea name="symptom" id="symptom" cols="30" rows="1" placeholder="Enter your symptoms"></textarea>
+
+                        </td>
+                    </tr>
+               <tr>
+                <td><label for="days">Days</label></td>
+                <td><input type="number" placeholder="Enter no. of days" id="day" min="0"></td>
+               </tr>
+               <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" size=30 name="age" placeholder="Enter Your age" id="age" min="0" max="100"></td>
+               </tr>
+               <tr>
+                <td>
+                    <button id="reset" type="button">Reset</button>
+
+                </td>
+                <td>
+                    <button id="submit">Predict Now</button>
+
+                </td>
+               </tr>
+            </table>
+            </div>
+           
+        </div>
+        <div class="footer">
+            <div id="output">
+                <div id="generatedText"></div>
+               </div>
+        </div>
+    </div>
+</body>
+<script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+<script type="module" src="scripts.js"></script>
+
+</html>
